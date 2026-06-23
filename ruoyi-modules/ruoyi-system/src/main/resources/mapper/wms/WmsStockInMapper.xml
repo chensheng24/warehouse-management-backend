@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dromara.wms.mapper.WmsStockInMapper">
+    <select id="selectCustomPage" resultType="org.dromara.wms.domain.vo.WmsStockInVo" >
+        select
+            s.id,
+            s.product_id,
+            p.product_name,
+            s.quantity,
+            s.supplier,
+            s.create_time
+        from wms_stock_in s
+         left join wms_product p on s.product_id = p.id
+         ${ew.getCustomSqlSegment}
+    </select>
+</mapper>

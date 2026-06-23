@@ -68,7 +68,7 @@
                 <profiles.active>local</profiles.active>
                 <logging.level>info</logging.level>
                 <monitor.username>ruoyi</monitor.username>
-                
+
                 <monitor.password>123456</monitor.password>
             </properties>
         </profile>
